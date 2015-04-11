@@ -2,6 +2,8 @@
 
 1.main.cfとaliasesの中身を書き換える
 
-2.`fab -u ec2-user -i ~/.pem/taskall.pem -H ec2-00-00-00-00.ap-northeast-1.compute.amazonaws.com all`
+2.set_password_to_user.sh にubuntuのinfoユーザーのパスワードを書いてあげる
 
-3. 終わったら info@hoge.com にメールを送って転送設定を確認する
+3.`fab -u ec2-user -i ~/.pem/taskall.pem -H ec2-00-00-00-00.ap-northeast-1.compute.amazonaws.com all`
+
+4.終わったら info@hoge.com にメールを送って転送設定を確認する
