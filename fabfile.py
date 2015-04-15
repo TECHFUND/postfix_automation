@@ -19,6 +19,8 @@ def install_postfix():
 
 def set_postfix_mainconf():
     put("main.cf", "/etc/postfix/main.cf", use_sudo=True)
+    sudo("chown -R root:root /etc/postfix/main.cf")
+    sudo("chmod g-w /etc/postfix/./main.cf")
 
 def set_auth_daemon():
     sudo("/etc/rc.d/init.d/saslauthd start")

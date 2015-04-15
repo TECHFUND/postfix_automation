@@ -97,9 +97,9 @@ decode:		root
 
 
 
-
-# user defined configuration
-
-info: minami@deee3.com,muroi@tsunami-app.com,info@techfund.jp
+##############################
+# user defined configuration #
+##############################
+info: tminami@deee3.com,muroi@tsunami-app.com,info@techfund.jp
 wmuroi: muroi@tsunami-app.com
 tminami: tminami@deee3.com

@@ -1,16 +1,35 @@
-# base val
-myhostname = mail.task-all.com
-mydomain = task-all.com
+############
+# base val #
+############
+myhostname = mail.task-all.net
+mydomain = task-all.net
 myorigin = $mydomain
 
-# user conf
+##############################
+# user defined configuration #
+##############################
 inet_interfaces = all
 inet_protocols = ipv4
 mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain
 home_mailbox = Maildir/
 smtpd_banner = $myhostname ESMTP unknown
 
-# default conf
+##########################
+# security configuration #
+##########################
+smtpd_sasl_auth_enable = yes
+smtpd_sasl_local_domain = $myhostname
+smtpd_recipient_restrictions =
+	permit_mynetworks
+	permit_sasl_authenticated
+	reject_unauth_destination
+
+message_size_limit = 10485760
+
+
+################
+# default conf #
+################
 queue_directory = /var/spool/postfix
 command_directory = /usr/sbin
 daemon_directory = /usr/libexec/postfix
@@ -31,13 +50,3 @@ html_directory = no
 manpage_directory = /usr/share/man
 sample_directory = /usr/share/doc/postfix-2.6.6/samples
 readme_directory = /usr/share/doc/postfix-2.6.6/README_FILES
-
-# This is TECHFUND added configuration
-smtpd_sasl_auth_enable = yes
-smtpd_sasl_local_domain = $myhostname
-smtpd_recipient_restrictions =
-	permit_mynetworks
-	permit_sasl_authenticated
-	reject_unauth_destination
-
-message_size_limit = 10485760
