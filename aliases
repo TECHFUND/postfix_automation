@@ -100,6 +100,8 @@ decode:		root
 ##############################
 # user defined configuration #
 ##############################
-info: tminami@deee3.com,muroi@tsunami-app.com,info@techfund.jp
+info: mta_tam0421@yahoo.co.jp,muroi@tsunami-app.com,info@techfund.jp,_sgtn@techfund.jp
+admin:info@techfund.jp,_sgtn@techfund.jp
 wmuroi: muroi@tsunami-app.com
-tminami: tminami@deee3.com
+tminami: mta_tam0421@yahoo.co.jp
+

@@ -11,7 +11,8 @@ def all():
     choose_postfix()
     run_postfix()
     create_info_user()
-    set_mail_proxy()
+    set_relaymail()
+    set_log_clearance()
 
 def install_postfix():
     sudo("yum update -y")
@@ -45,8 +46,13 @@ def create_info_user():
     put("set_password_to_user.sh", "set_password_to_user.sh", use_sudo=True)
     sudo("expect set_password_to_user.sh")
 
-def set_mail_proxy():
+def set_relaymail():
     put("aliases", "/etc/aliases", use_sudo=True)
     sudo("chown root:root /etc/aliases")
     sudo("chmod 640 /etc/aliases")
     sudo("newaliases")
+
+def set_log_clearance():
+    put("syslog", "/etc/logrotate.d/syslog", use_sudo=True)
+    sudo("chmod 644 /etc/logrotate.d/syslog")
+    sudo("/etc/init.d/rsyslog restart")
