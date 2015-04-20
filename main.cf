@@ -30,7 +30,7 @@ smtpd_sasl_local_domain = $myhostname
 smtpd_recipient_restrictions =
         reject_unauth_destination
 
-        message_size_limit = 10485760
+message_size_limit = 10485760
 
 # this enable you to reject 5times in 60second mail
 anvil_rate_time_unit=60s
