@@ -101,7 +101,7 @@ decode:		root
 # user defined configuration #
 ##############################
 info: mta_tam0421@yahoo.co.jp,muroi@tsunami-app.com,info@techfund.jp,_sgtn@techfund.jp
-admin:info@techfund.jp,_sgtn@techfund.jp
+admin:admin@techfund.jp
 wmuroi: muroi@tsunami-app.com
 tminami: mta_tam0421@yahoo.co.jp
 
